@@ -32,7 +32,7 @@ export default function Home() {
       <div className="flex flex-col max-w-96 items-center justify-center gap-4 rounded-3xl border border-gray-200 p-6 dark:border-gray-700">
           <GoogleLogin
             onSuccess={onSuccess}
-            onError={onErrorLogin}
+            onError={() => onErrorLogin}
           />
 
           <p className="font-normal text-sm text-black break-words max-w-full">{response?.credential}</p>
